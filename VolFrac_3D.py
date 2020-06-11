@@ -390,6 +390,7 @@ while (sphVolume/volume) < volumeFraction:
         fillCount += 1
         myVol.fill(chosenLevel, chosenNode)
         
+	# Comment out if not using Abaqus
         if sponge:
             createAndCutSphere(diameters[chosenLevel-1], myVol.tree[chosenLevel][chosenNode][6], fillCount) # Un/comment for Abaqus
             sphere = Part.makeSphere((diameters[chosenLevel-1] + 0.5)/2.0)
